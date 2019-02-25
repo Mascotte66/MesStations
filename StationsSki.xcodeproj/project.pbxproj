@@ -12,6 +12,10 @@
 		88E38EA722229A83007AF53F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E38EA622229A83007AF53F /* Assets.xcassets */; };
 		88E38EAA22229A83007AF53F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E38EA822229A83007AF53F /* LaunchScreen.storyboard */; };
 		88E38EB222229B55007AF53F /* DepartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E38EB122229B55007AF53F /* DepartViewController.swift */; };
+		88E38EB72223E6B5007AF53F /* ListeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E38EB62223E6B5007AF53F /* ListeController.swift */; };
+		88E38EB92223F44F007AF53F /* StationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E38EB82223F44F007AF53F /* StationController.swift */; };
+		88E38EBB22240274007AF53F /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E38EBA22240274007AF53F /* Stations.swift */; };
+		88E38EBF22244636007AF53F /* CellListe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E38EBE22244636007AF53F /* CellListe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		88E38EA922229A83007AF53F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88E38EAB22229A83007AF53F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88E38EB122229B55007AF53F /* DepartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartViewController.swift; sourceTree = "<group>"; };
+		88E38EB62223E6B5007AF53F /* ListeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeController.swift; sourceTree = "<group>"; };
+		88E38EB82223F44F007AF53F /* StationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationController.swift; sourceTree = "<group>"; };
+		88E38EBA22240274007AF53F /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
+		88E38EBE22244636007AF53F /* CellListe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellListe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 		88E38EB322229B63007AF53F /* Modeles */ = {
 			isa = PBXGroup;
 			children = (
+				88E38EBA22240274007AF53F /* Stations.swift */,
 			);
 			path = Modeles;
 			sourceTree = "<group>";
@@ -76,6 +85,7 @@
 		88E38EB422229B75007AF53F /* Vues */ = {
 			isa = PBXGroup;
 			children = (
+				88E38EBE22244636007AF53F /* CellListe.swift */,
 			);
 			path = Vues;
 			sourceTree = "<group>";
@@ -84,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				88E38EB122229B55007AF53F /* DepartViewController.swift */,
+				88E38EB62223E6B5007AF53F /* ListeController.swift */,
+				88E38EB82223F44F007AF53F /* StationController.swift */,
 			);
 			path = Controleurs;
 			sourceTree = "<group>";
@@ -159,7 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E38EB92223F44F007AF53F /* StationController.swift in Sources */,
+				88E38EBF22244636007AF53F /* CellListe.swift in Sources */,
+				88E38EBB22240274007AF53F /* Stations.swift in Sources */,
 				88E38EB222229B55007AF53F /* DepartViewController.swift in Sources */,
+				88E38EB72223E6B5007AF53F /* ListeController.swift in Sources */,
 				88E38EA022229A7F007AF53F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

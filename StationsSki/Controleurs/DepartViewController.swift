@@ -9,19 +9,29 @@
 import UIKit
 
 class DepartViewController: UIViewController {
+    
+   
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
     }
-    
+/*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "liste", let vc = segue.destination as? ListeController {
+            vc.lesStations = (sender as? [Station])!
+        }
+    }
+  */
     @IBAction func favorite(_ sender: Any) {
         print("favorite")
     }
     
     @IBAction func liste(_ sender: Any) {
         print("Liste")
+        performSegue(withIdentifier: "liste", sender: nil)
     }
    
 
