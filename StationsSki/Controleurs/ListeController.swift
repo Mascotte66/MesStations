@@ -12,11 +12,14 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
    
     var lesStations: [Station] = []
     
+    @IBOutlet weak var titres: UIView!
     @IBOutlet weak var tableListeStations: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titres.layer.cornerRadius = 10
         tableListeStations.delegate = self
         tableListeStations.dataSource = self
         

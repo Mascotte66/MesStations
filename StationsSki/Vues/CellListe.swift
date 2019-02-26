@@ -11,7 +11,9 @@ import Foundation
 
 class CellListe: UITableViewCell {    
  
-    @IBOutlet weak var favorite: UIImageView!
+    @IBOutlet weak var container: UIView!
+  
+    @IBOutlet weak var fav: UILabel!
     @IBOutlet weak var pays: UILabel!
     @IBOutlet weak var nom: UILabel!
     @IBOutlet weak var temps: UIImageView!
@@ -24,11 +26,11 @@ class CellListe: UITableViewCell {
         didSet {
             if station != nil {
                 if station!.favorite {
-                    favorite.image = UIImage(named: "Ouverture")
+                    fav.text = "😄"
                 } else {
-                    favorite.image = UIImage()
+                   fav.text = ""
                 }
-                
+                container.layer.cornerRadius = 10
                 pays.text = station!.pays
                 nom.text = station!.nom
                 temps.image = UIImage(named: "Ouverture")
@@ -39,3 +41,4 @@ class CellListe: UITableViewCell {
         }
     }
 }
+
