@@ -16,10 +16,13 @@ class CellListe: UITableViewCell {
     @IBOutlet weak var fav: UILabel!
     @IBOutlet weak var pays: UILabel!
     @IBOutlet weak var nom: UILabel!
-    @IBOutlet weak var temps: UIImageView!
-    @IBOutlet weak var temperatureHaut: UILabel!
-    @IBOutlet weak var temperatureBas: UILabel!
-    @IBOutlet weak var vent: UILabel!
+    @IBOutlet weak var pctopen: UILabel!
+    @IBOutlet weak var lastsnow: UILabel!
+    @IBOutlet weak var newsnow: UILabel!
+    @IBOutlet weak var uppersnow: UILabel!
+    @IBOutlet weak var lowersnow: UILabel!
+    @IBOutlet weak var conditions: UILabel!
+    
     
     var station: Station? {
         
@@ -33,10 +36,12 @@ class CellListe: UITableViewCell {
                 container.layer.cornerRadius = 10
                 pays.text = station!.pays
                 nom.text = station!.nom
-                temps.image = UIImage(named: "Ouverture")
-                temperatureHaut.text = "-10"
-                temperatureBas.text = "04"
-                vent.text = "20"
+                pctopen.text = String(station!.pctopen)
+                lastsnow.text = station!.lastsnow
+                newsnow.text = String(station!.newsnow)
+                uppersnow.text = String(station!.uppersnow)
+                lowersnow.text = String(station!.lowersnow)
+                conditions.text = station!.conditions
             }
         }
     }

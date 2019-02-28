@@ -14,8 +14,13 @@ class Station {
     private var _pays: String
     private var _nom: String
     private var _id: Int
-    private var _image: UIImage?
-    private var _location: String
+    private var _pctopen: Int
+    private var _lastsnow: String
+    private var _newsnow: Double
+    private var _uppersnow: Double
+    private var _lowersnow: Double
+    private var _conditions: String
+    
     
     var favorite: Bool {
         get{
@@ -49,30 +54,66 @@ class Station {
             _id = id
         }
     }
-    var image: UIImage? {
+    var pctopen: Int {
         get{
-            return _image
+            return _pctopen
         }
         set{
-            _image = image
+            _pctopen = pctopen
         }
     }
-    var location: String {
+    var lastsnow: String {
         get{
-            return _location
+            return _lastsnow
         }
         set{
-            _location = location
+            _lastsnow = lastsnow
+        }
+    }
+    var newsnow: Double {
+        get{
+            return _newsnow
+        }
+        set{
+            _newsnow = newsnow
+        }
+    }
+    var uppersnow: Double {
+        get{
+            return _uppersnow
+        }
+        set{
+            _uppersnow = uppersnow
+        }
+    }
+    var lowersnow: Double {
+        get{
+            return _lowersnow
+        }
+        set{
+            _lowersnow = lowersnow
+        }
+    }
+    var conditions: String {
+        get{
+            return _conditions
+        }
+        set{
+            _conditions = conditions
         }
     }
     
-    init(favorite: Bool, pays: String, nom: String, id: Int, image: UIImage?, location: String) {
+    init(favorite: Bool, pays: String, nom: String, id: Int, pctopen: Int, lastsnow: String, newsnow: Double, uppersnow: Double, lowersnow: Double, conditions: String) {
         _favorite = favorite
         _pays = pays
         _nom = nom
         _id = id
-        _image = image
-        _location = location
+        _pctopen = pctopen
+        _lastsnow = lastsnow
+        _newsnow = newsnow
+        _uppersnow = uppersnow
+        _lowersnow = lowersnow
+        _conditions = conditions
     }
     
 }

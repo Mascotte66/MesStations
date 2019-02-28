@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88ABE85E2226999700F3FD39 /* APIWU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE85D2226999700F3FD39 /* APIWU.swift */; };
+		88ABE86022269B1400F3FD39 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE85F22269B1400F3FD39 /* APIHelper.swift */; };
+		88ABE8642227F48700F3FD39 /* XMLIndexer+XMLIndexerDeserializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE8622227F48700F3FD39 /* XMLIndexer+XMLIndexerDeserializable.swift */; };
+		88ABE8652227F48700F3FD39 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE8632227F48700F3FD39 /* SWXMLHash.swift */; };
 		88E38EA022229A7F007AF53F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E38E9F22229A7F007AF53F /* AppDelegate.swift */; };
 		88E38EA522229A7F007AF53F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E38EA322229A7F007AF53F /* Main.storyboard */; };
 		88E38EA722229A83007AF53F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E38EA622229A83007AF53F /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88ABE85D2226999700F3FD39 /* APIWU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWU.swift; sourceTree = "<group>"; };
+		88ABE85F22269B1400F3FD39 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		88ABE8622227F48700F3FD39 /* XMLIndexer+XMLIndexerDeserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XMLIndexer+XMLIndexerDeserializable.swift"; sourceTree = "<group>"; };
+		88ABE8632227F48700F3FD39 /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
 		88E38E9C22229A7E007AF53F /* StationsSki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StationsSki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E38E9F22229A7F007AF53F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E38EA422229A7F007AF53F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88ABE8612227F46500F3FD39 /* SWXMLHash */ = {
+			isa = PBXGroup;
+			children = (
+				88ABE8632227F48700F3FD39 /* SWXMLHash.swift */,
+				88ABE8622227F48700F3FD39 /* XMLIndexer+XMLIndexerDeserializable.swift */,
+			);
+			path = SWXMLHash;
+			sourceTree = "<group>";
+		};
 		88E38E9322229A7E007AF53F = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +79,7 @@
 		88E38E9E22229A7E007AF53F /* StationsSki */ = {
 			isa = PBXGroup;
 			children = (
+				88ABE8612227F46500F3FD39 /* SWXMLHash */,
 				88E38EB422229B75007AF53F /* Vues */,
 				88E38EB322229B63007AF53F /* Modeles */,
 				88E38EB522229B89007AF53F /* Controleurs */,
@@ -78,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				88E38EBA22240274007AF53F /* Stations.swift */,
+				88ABE85D2226999700F3FD39 /* APIWU.swift */,
+				88ABE85F22269B1400F3FD39 /* APIHelper.swift */,
 			);
 			path = Modeles;
 			sourceTree = "<group>";
@@ -174,8 +194,12 @@
 				88E38EB92223F44F007AF53F /* StationController.swift in Sources */,
 				88E38EBF22244636007AF53F /* CellListe.swift in Sources */,
 				88E38EBB22240274007AF53F /* Stations.swift in Sources */,
+				88ABE8652227F48700F3FD39 /* SWXMLHash.swift in Sources */,
 				88E38EB222229B55007AF53F /* DepartViewController.swift in Sources */,
+				88ABE86022269B1400F3FD39 /* APIHelper.swift in Sources */,
 				88E38EB72223E6B5007AF53F /* ListeController.swift in Sources */,
+				88ABE85E2226999700F3FD39 /* APIWU.swift in Sources */,
+				88ABE8642227F48700F3FD39 /* XMLIndexer+XMLIndexerDeserializable.swift in Sources */,
 				88E38EA022229A7F007AF53F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

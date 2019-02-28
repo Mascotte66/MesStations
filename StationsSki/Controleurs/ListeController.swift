@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
@@ -24,12 +25,6 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         tableListeStations.dataSource = self
         
         //var station:  Station
-        
-        for i in 0...4 {
-            var f = false
-            if i == 2 { f = true}
-            lesStations.append(Station(favorite: f, pays: "Pays: \(i)", nom: "Nom: \(100 * i)", id: i*10000000, image: UIImage(named: "Ouverture"), location: "Inconnue"))
-        }
         
     }
     
