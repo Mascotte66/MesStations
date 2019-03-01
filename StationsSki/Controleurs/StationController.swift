@@ -10,21 +10,36 @@ import UIKit
 
 class StationController: UIViewController {
 
+     var res : APIForecast?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+        
+       
+      
+        
+        
+        
+        
+        
+        /*
+        print("Nb: \(res?.forecast.count)")
+        print(res?.name)
+        print(res?.forecast[0].time)
+        print(res?.forecast[0].frzglvl_m)
+        print(res?.forecast[0].base.wx_icon)
+        print(res?.forecast[0].base.temp_c)
+        print(res?.forecast[0].upper.wx_icon)
+        print(res?.forecast[0].upper.temp_c)
+        print(res?.forecast[3].time)
+        print(res?.forecast[3].frzglvl_m)
+        print(res?.forecast[3].base.wx_icon)
+        print(res?.forecast[3].base.temp_c)
+        print(res?.forecast[3].upper.wx_icon)
+        print(res?.forecast[3].upper.temp_c)
+         */
+ }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

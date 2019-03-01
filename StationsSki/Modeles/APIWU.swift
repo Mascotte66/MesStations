@@ -17,7 +17,7 @@ struct APIWU: Decodable {
     var lowersnow_cm: Double
     //var lowersnow_in: Double
     var uppersnow_cm: Double
-    var uppersnow_in: Double
+    //var uppersnow_in: Double
     var pctopen: Int
     var lastsnow: String
     var reportdate: String
