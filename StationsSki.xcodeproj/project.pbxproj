@@ -12,6 +12,7 @@
 		88ABE8642227F48700F3FD39 /* XMLIndexer+XMLIndexerDeserializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE8622227F48700F3FD39 /* XMLIndexer+XMLIndexerDeserializable.swift */; };
 		88ABE8652227F48700F3FD39 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE8632227F48700F3FD39 /* SWXMLHash.swift */; };
 		88ABE86B22294B5200F3FD39 /* APIForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE86A22294B5200F3FD39 /* APIForecast.swift */; };
+		88ABE86D222AB23B00F3FD39 /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE86C222AB23B00F3FD39 /* TemperatureController.swift */; };
 		88E38EA022229A7F007AF53F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E38E9F22229A7F007AF53F /* AppDelegate.swift */; };
 		88E38EA522229A7F007AF53F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E38EA322229A7F007AF53F /* Main.storyboard */; };
 		88E38EA722229A83007AF53F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E38EA622229A83007AF53F /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		88ABE8622227F48700F3FD39 /* XMLIndexer+XMLIndexerDeserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XMLIndexer+XMLIndexerDeserializable.swift"; sourceTree = "<group>"; };
 		88ABE8632227F48700F3FD39 /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
 		88ABE86A22294B5200F3FD39 /* APIForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIForecast.swift; sourceTree = "<group>"; };
+		88ABE86C222AB23B00F3FD39 /* TemperatureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureController.swift; sourceTree = "<group>"; };
 		88E38E9C22229A7E007AF53F /* StationsSki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StationsSki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E38E9F22229A7F007AF53F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E38EA422229A7F007AF53F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				88E38EBE22244636007AF53F /* CellListe.swift */,
+				88ABE86C222AB23B00F3FD39 /* TemperatureController.swift */,
 			);
 			path = Vues;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88ABE86D222AB23B00F3FD39 /* TemperatureController.swift in Sources */,
 				88E38EB92223F44F007AF53F /* StationController.swift in Sources */,
 				88E38EBF22244636007AF53F /* CellListe.swift in Sources */,
 				88E38EBB22240274007AF53F /* Stations.swift in Sources */,

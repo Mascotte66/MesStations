@@ -24,8 +24,6 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         tableListeStations.delegate = self
         tableListeStations.dataSource = self
         
-        //var station:  Station
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,8 +43,6 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
-    
-    
     
     @IBAction func choixFavorite(_ sender: Any) {
         print("choix")
