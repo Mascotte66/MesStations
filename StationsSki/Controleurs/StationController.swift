@@ -8,14 +8,14 @@
 
 import UIKit
 
-class StationController: UIViewController {
+class StationController: UIViewController {    
     
-    var res : APIForecast?
+    var forecasts : APIForecast?
     
     @IBOutlet weak var nomStation: UILabel!
     @IBOutlet weak var pctOpen: UILabel!
-    @IBOutlet weak var neigeHaut: UIView!
-    @IBOutlet weak var neigeBas: UIView!
+    @IBOutlet weak var neigeHaut: UILabel!
+    @IBOutlet weak var neigeBas: UILabel!
     @IBOutlet weak var dateDerChute: UILabel!
     @IBOutlet weak var hauteurDerChute: UILabel!
     
@@ -32,42 +32,33 @@ class StationController: UIViewController {
     @IBOutlet weak var icone11: UIImageView!
     @IBOutlet weak var icone12: UIImageView!
     
-    @IBOutlet weak var veTemperatures: TemperatureController!
-    
-    
-    
-    
-    
-    
+    @IBOutlet weak var veTemperatures: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let prev = Forecasts(forecasts: forecasts!)
         
+        nomStation.text = nomS
+        pctOpen.text = String(pctO)
+        neigeHaut.text = String(neigeH)
+        neigeBas.text = String(neigeB)
+        if dateDerC  != "" {dateDerChute.text = dateDerC}
+                else       {dateDerChute.text = "N/A"}
+        hauteurDerChute.text = String(hauteurDerC)
         
-        
-        
-        
-        
-        
-       
-         print("Nb: \(res!.forecast.count)")
-         print(res!.name)
-         print("Time: \(res!.forecast[0].time)")
-         print(res!.forecast[0].frzglvl_m)
-         print(res!.forecast[0].base.wx_icon)
-         print(res!.forecast[0].base.temp_c)
-         print(res!.forecast[0].upper.wx_icon)
-         print(res!.forecast[0].upper.temp_c)
-         print("Time: \(res!.forecast[3].time)")
-         print(res!.forecast[3].frzglvl_m)
-         print(res!.forecast[3].base.wx_icon)
-         print(res!.forecast[3].base.temp_c)
-         print(res!.forecast[3].upper.wx_icon)
-         print(res!.forecast[3].upper.temp_c)
-        
+        if indPrem == 0 {icone1.image = UIImage(named: nomIcone[0])}
+        if indPrem <= 1 {icone2.image = UIImage(named: nomIcone[1])}
+        if indPrem <= 2 {icone3.image = UIImage(named: nomIcone[2])}
+        if indPrem <= 3 {icone4.image = UIImage(named: nomIcone[3])}
+        if indPrem <= 4 {icone5.image = UIImage(named: nomIcone[4])}
+        if indPrem <= 5 {icone6.image = UIImage(named: nomIcone[5])}
+        if indPrem == 6 {icone7.image = UIImage(named: nomIcone[6])}
+        if indPrem <= 7 {icone8.image = UIImage(named: nomIcone[7])}
+        if indPrem <= 8 {icone9.image = UIImage(named: nomIcone[8])}
+        if indPrem <= 9 {icone10.image = UIImage(named: nomIcone[9])}
+        if indPrem <= 10 {icone11.image = UIImage(named: nomIcone[10])}
+        if indPrem <= 11 {icone12.image = UIImage(named: nomIcone[11])}
+      
     }
-    
-    
-    
 }

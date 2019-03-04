@@ -8,11 +8,32 @@
 
 import UIKit
 
-class DepartViewController: UIViewController {
+//variables globales!!!!!!
+var id: Int = 0
+var nomS = ""
+var pctO: Int = 0
+var neigeH: Double = 0
+var neigeB: Double = 0
+var dateDerC: String = ""
+var hauteurDerC: Double = 0
+
+var indPrem: Int = 0
+var indDer: Int = 0
+
+var lesDates: [String] = []
+var nomIcone: [String] = []
+var tempBas: [Double] = []
+var tempHaut: [Double] = []
+var neige: [Double] = []
+var pluie: [Double] = []
+var vent: [Double] = []
+var rafales: [Double] = []
+
+class DepartViewController: UIViewController {    
     
     var lesStations: [Station] = []
-    var res : APIForecast?
-
+    var forecasts : APIForecast?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +59,7 @@ class DepartViewController: UIViewController {
                 if data != nil {
                     do {
                         let responseJSON = try JSONDecoder().decode(APIForecast.self, from: data!)
-                        self.res = responseJSON
+                        self.forecasts = responseJSON
                     } catch {
                         print(error.localizedDescription)
                         
@@ -61,9 +82,18 @@ class DepartViewController: UIViewController {
             }
             if donnees != nil {
                 self.lesStations.append(Station(favorite: true, pays: donnees!.resortcountry, nom: donnees!.resortname, id: donnees!.resortid, pctopen: donnees!.pctopen, lastsnow: donnees!.lastsnow, newsnow: donnees!.newsnow_cm, uppersnow: donnees!.uppersnow_cm, lowersnow: donnees!.lowersnow_cm, conditions: donnees!.conditions))
+                
+                id = donnees!.resortid
+                nomS = donnees!.resortname
+                pctO = donnees!.pctopen
+                neigeH = donnees!.uppersnow_cm
+                neigeB = donnees!.lowersnow_cm
+                dateDerC = donnees!.lastsnow
+                hauteurDerC = donnees!.newsnow_cm
+                
+                //self.majParametres()
             }
         }
-        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -72,16 +102,13 @@ class DepartViewController: UIViewController {
         }
         
         if segue.identifier == "station", let vc = segue.destination as? StationController {
-            vc.res = (sender as? APIForecast)!
+            vc.forecasts = (sender as? APIForecast)!
         }
-        
     }
     
-   
- 
     @IBAction func favorite(_ sender: Any) {
         print("favorite")
-         performSegue(withIdentifier: "station", sender: res)
+         performSegue(withIdentifier: "station", sender: forecasts)
     }
     
     @IBAction func liste(_ sender: Any) {
@@ -89,5 +116,4 @@ class DepartViewController: UIViewController {
         performSegue(withIdentifier: "liste", sender: lesStations)
     }
    
-
 }

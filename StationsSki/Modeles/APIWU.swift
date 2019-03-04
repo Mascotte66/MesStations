@@ -13,11 +13,8 @@ struct APIWU: Decodable {
     var resortname: String
     var resortcountry: String
     var newsnow_cm: Double
-    //var newsnow_in:  Double
     var lowersnow_cm: Double
-    //var lowersnow_in: Double
-    var uppersnow_cm: Double
-    //var uppersnow_in: Double
+    var uppersnow_cm: Double    
     var pctopen: Int
     var lastsnow: String
     var reportdate: String

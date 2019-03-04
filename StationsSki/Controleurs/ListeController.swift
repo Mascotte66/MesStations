@@ -13,17 +13,16 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
    
     var lesStations: [Station] = []
     
+    
     @IBOutlet weak var titres: UIView!
     @IBOutlet weak var tableListeStations: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         titres.layer.cornerRadius = 10
         tableListeStations.delegate = self
-        tableListeStations.dataSource = self
-        
+        tableListeStations.dataSource = self        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,5 +55,7 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBAction func supprimerStation(_ sender: Any) {
         print("supprimer")
     }
+    
+  
     
 }

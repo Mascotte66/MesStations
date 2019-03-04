@@ -709,40 +709,40 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="whg-rd-GXg">
                                         <rect key="frame" x="18" y="60" width="988" height="40"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YKh-L1-MFq">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YKh-L1-MFq">
                                                 <rect key="frame" x="0.0" y="0.0" width="58.5" height="40"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="75x-Oh-CcF">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="75x-Oh-CcF">
                                                 <rect key="frame" x="84.5" y="0.0" width="58.5" height="40"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h9n-Qj-qiP">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h9n-Qj-qiP">
                                                 <rect key="frame" x="169" y="0.0" width="58.5" height="40"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bWN-PS-jUR">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bWN-PS-jUR">
                                                 <rect key="frame" x="253.5" y="0.0" width="58.5" height="40"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cOi-TD-JWT">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cOi-TD-JWT">
                                                 <rect key="frame" x="338" y="0.0" width="58.5" height="40"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hE5-gK-TEb">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hE5-gK-TEb">
                                                 <rect key="frame" x="422.5" y="0.0" width="58.5" height="40"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ohs-XR-iYm">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ohs-XR-iYm">
                                                 <rect key="frame" x="507" y="0.0" width="58.5" height="40"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i9k-E9-1rH">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i9k-E9-1rH">
                                                 <rect key="frame" x="591.5" y="0.0" width="58.5" height="40"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VNw-Dn-Prn">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VNw-Dn-Prn">
                                                 <rect key="frame" x="676" y="0.0" width="58.5" height="40"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ugM-Ep-GrT">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ugM-Ep-GrT">
                                                 <rect key="frame" x="760.5" y="0.0" width="58.5" height="40"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="43n-05-9GC">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="43n-05-9GC">
                                                 <rect key="frame" x="845" y="0.0" width="58.5" height="40"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Rz-v7-UPB">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Rz-v7-UPB">
                                                 <rect key="frame" x="929.5" y="0.0" width="58.5" height="40"/>
                                             </imageView>
                                         </subviews>
@@ -804,8 +804,8 @@
                         <outlet property="icone7" destination="Ohs-XR-iYm" id="4aO-kk-MPY"/>
                         <outlet property="icone8" destination="i9k-E9-1rH" id="jsD-He-oOI"/>
                         <outlet property="icone9" destination="VNw-Dn-Prn" id="uE9-Yx-rdf"/>
-                        <outlet property="neigeBas" destination="Knc-n8-Tbk" id="Swt-S2-vE5"/>
-                        <outlet property="neigeHaut" destination="Knc-n8-Tbk" id="NNb-lK-njp"/>
+                        <outlet property="neigeBas" destination="kgn-7u-i2V" id="yXH-gL-7jp"/>
+                        <outlet property="neigeHaut" destination="Esk-0q-0u4" id="HR7-9Q-92W"/>
                         <outlet property="nomStation" destination="VIy-JA-cF1" id="DIf-7q-rIa"/>
                         <outlet property="pctOpen" destination="1Q1-Ya-y0M" id="Rbi-bX-6yK"/>
                         <outlet property="veTemperatures" destination="3Wk-sf-avC" id="0vn-E4-CTt"/>
