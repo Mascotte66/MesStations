@@ -44,7 +44,7 @@ class StationController: UIViewController {
         neigeHaut.text = String(neigeH)
         neigeBas.text = String(neigeB)
         if dateDerC  != "" {dateDerChute.text = dateDerC}
-                else       {dateDerChute.text = "N/A"}
+                else git ass      {dateDerChute.text = "N/A"}
         hauteurDerChute.text = String(hauteurDerC)
         
         if indPrem == 0 {icone1.image = UIImage(named: nomIcone[0])}
