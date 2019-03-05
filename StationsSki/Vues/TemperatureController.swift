@@ -10,60 +10,82 @@ import Foundation
 import UIKit
 
 class TemperatureController : UIView {
-   /*
-    var id: Int = 0
-    var nomS = ""
-    var pctO: Int = 0
-    var neigeH: Double = 0
-    var neigeB: Double = 0
-    var dateDerC: String = ""
-    var hauteurDerC: Double = 0
+   
     
-    var indPrem: Int = 0
-    var indDer: Int = 0
-    
-    var lesDates: [String] = []
-    var nomIcone: [String] = []
-    var tempBas: [Double] = []
-    var tempHaut: [Double] = []
-    var neige: [Double] = []
-    var pluie: [Double] = []
-    var vent: [Double] = []
-    var rafales: [Double] = []
-    */
+
     override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        
-        //lectureParametres()
-        
+        super.draw(rect)        
+       
         let bounds: CGRect  = self.bounds
-        print("bounds num 2: \(bounds)")
+        let xMax = bounds.width
+        let yMax = bounds.height
+        let margeH = xMax / 20
+        let margeV = yMax / 10
+        let pasInt = (xMax - (2 * margeH)) / 48
         
-        print("*********** \(lesDates)")
+        var typeG = ""
         
-        let path = UIBezierPath()
-        path.lineWidth = 1.5
-        UIColor.black.setStroke()
-        
-        var p = CGPoint()
-        p.x = CGFloat(200.0)
-        p.y = CGFloat(150.0)
-        path.move(to: p)
-        
-        p.x = CGFloat(290.0)
-        p.y = CGFloat(160.0)
-        path.addLine(to: p)
-        
-        p.x = CGFloat(350.0)
-        p.y = CGFloat(170.0)
-        path.addLine(to: p)
-        
-        p.x = CGFloat(bounds.maxX)
-        p.y = CGFloat(bounds.maxY)
-        path.addLine(to: p)
+        //determiner les temperatures min/max
+        var tHigh = 10.0
+        var tLow = -10.0
+        for i in indPrem...indDer {
+            if tempHaut[i] > 20 {tempHaut[i] = 20}
+            if tempBas[i] > 20 {tempBas[i] = 20}
+            if tempHaut[i] < -20 {tempHaut[i] = -20}
+            if tempBas[i] < -20 {tempBas[i] = -20}
+            if tempHaut[i] < tLow {tLow = tempHaut[i]}
+            if tempBas[i] > tHigh {tHigh = tempBas[i]}
+        }
+        if tHigh > 10 || tLow < -10 {typeG = "T2"} else {typeG = "T1"}
         
         
-        path.stroke()
+        let maVue = TracerAxes(maVue: self)
+        maVue.dessinerAxes(type: typeG)
+        
+        print("tempHaut  \(tempHaut)")
+        print("tempBas   \(tempBas)")
+        print(tLow)
+        print(tHigh)
+        
+        //dessiner les graphes
+        
+        var p =  CGPoint()
+        let hUtile = yMax / 2 - margeV
+        var coef: CGFloat = 0.0
+        if typeG == "T1" {coef = hUtile / 10} else {coef = hUtile / 20}
+        
+        let pathH = UIBezierPath()
+        pathH.lineWidth = 2.0
+        UIColor.green.setStroke()
+        
+        
+        p.x = margeH + (pasInt * CGFloat(indPrem + 1))
+        p.y = yMax / 2 - (CGFloat(tempHaut[indPrem]) * coef)
+        pathH.move(to:p)
+        
+        for i in (indPrem + 1)...indDer {
+            p.x = margeH + (pasInt * CGFloat(i + 1))
+            p.y = yMax / 2 - (CGFloat(tempHaut[i]) * coef)
+            pathH.addLine(to: p)
+        }
+        pathH.stroke()
+        
+        
+        let pathB = UIBezierPath()
+        pathB.lineWidth = 1.0
+        UIColor.red.setStroke()
+        
+        p.x = margeH + (pasInt * CGFloat(indPrem + 1))
+        p.y = yMax / 2 - (CGFloat(tempBas[indPrem]) * coef)
+        pathB.move(to:p)
+        
+        for i in (indPrem + 1)...indDer {
+            p.x = margeH + (pasInt * CGFloat(i + 1))
+            p.y = yMax / 2 - (CGFloat(tempBas[i]) * coef)
+            pathB.addLine(to: p)
+        }
+        pathB.stroke()
+    }
         
         
         
@@ -73,5 +95,6 @@ class TemperatureController : UIView {
         
         
         
-    }    
+        
+    
 }

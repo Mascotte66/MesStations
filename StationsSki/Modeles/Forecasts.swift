@@ -33,7 +33,7 @@ class Forecasts {
         if lesPrev[0].time == "19:00" {indPrem = 6}
         if lesPrev[0].time == "22:00" {indPrem = 7}
         
-        indDer = 47 - indPrem
+        indDer = 47
         if indDer > nbDates - 1 {indDer = nbDates - 1}
         
         
@@ -42,7 +42,7 @@ class Forecasts {
         for i in 0...indDer {
             
             if i < indPrem {
-                lesDates.append("")
+                //lesDates.append("")
                 nomIcone.append("")
                 tempBas.append(0)
                 tempHaut.append(0)
@@ -51,16 +51,23 @@ class Forecasts {
                 vent.append(0)
                 rafales.append(0)
             } else {
-                lesDates.append(lesPrev[i].date)
-                nomIcone.append(lesPrev[i].upper.wx_icon)
-                tempBas.append(lesPrev[i].base.temp_c!)
-                tempHaut.append(lesPrev[i].upper.temp_c!)
-                neige.append(lesPrev[i].snow_mm)
-                pluie.append(lesPrev[i].rain_mm)
-                vent.append(lesPrev[i].upper.windspd_kmh)
-                rafales.append(lesPrev[i].upper.windgst_kmh ?? 0)
-                
+                let j = i - indPrem
+                nomIcone.append(lesPrev[j].upper.wx_icon)
+                tempBas.append(lesPrev[j].base.temp_c!)
+                tempHaut.append(lesPrev[j].upper.temp_c!)
+                neige.append(lesPrev[j].snow_mm/10)
+                pluie.append(lesPrev[j].rain_mm)
+                vent.append(lesPrev[j].upper.windspd_kmh)
+                rafales.append(lesPrev[j].base.windgst_kmh ?? 0)
             }
         }
+        
+        //cas des dates
+        for i in 0...5 {
+            lesDates.append(lesPrev[indPrem + (i * 8)].date)
+        }
+        print("lesDates:  \(lesDates)")
+        
+        
     }
 }
