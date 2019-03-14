@@ -56,7 +56,7 @@ class TemperatureController : UIView {
         
         let pathH = UIBezierPath()
         pathH.lineWidth = 2.0
-        UIColor.green.setStroke()
+        UIColor.blue.setStroke()
         
         
         p.x = margeH + (pasInt * CGFloat(indPrem + 1))

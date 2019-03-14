@@ -45,7 +45,7 @@ class VentController: UIView {
         
         let pathV = UIBezierPath()
         pathV.lineWidth = 2.0
-        UIColor.green.setStroke()
+        UIColor.blue.setStroke()
         
         
         p.x = margeH + (pasInt * CGFloat(indPrem + 1))

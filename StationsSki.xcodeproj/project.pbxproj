@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		884BC60E2236B58B006EBEA5 /* MonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884BC60D2236B58B006EBEA5 /* MonAnnotation.swift */; };
+		884BC6102238F829006EBEA5 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884BC60F2238F829006EBEA5 /* UserDefaultsHelper.swift */; };
+		884BC6122238FEA7006EBEA5 /* MonAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884BC6112238FEA7006EBEA5 /* MonAnnotationView.swift */; };
+		884BC614223A6458006EBEA5 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884BC613223A6458006EBEA5 /* DetailController.swift */; };
 		88ABE85E2226999700F3FD39 /* APIWU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE85D2226999700F3FD39 /* APIWU.swift */; };
 		88ABE86022269B1400F3FD39 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE85F22269B1400F3FD39 /* APIHelper.swift */; };
 		88ABE8642227F48700F3FD39 /* XMLIndexer+XMLIndexerDeserializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE8622227F48700F3FD39 /* XMLIndexer+XMLIndexerDeserializable.swift */; };
@@ -17,6 +21,7 @@
 		88ABE893222D3ED800F3FD39 /* TracerAxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE892222D3ED800F3FD39 /* TracerAxes.swift */; };
 		88ABE895222E94B900F3FD39 /* PrecipitationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE894222E94B900F3FD39 /* PrecipitationController.swift */; };
 		88ABE897222E94CF00F3FD39 /* VentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE896222E94CF00F3FD39 /* VentController.swift */; };
+		88ABE89B2232AD9500F3FD39 /* CarteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE89A2232AD9500F3FD39 /* CarteController.swift */; };
 		88E38EA022229A7F007AF53F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E38E9F22229A7F007AF53F /* AppDelegate.swift */; };
 		88E38EA522229A7F007AF53F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E38EA322229A7F007AF53F /* Main.storyboard */; };
 		88E38EA722229A83007AF53F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E38EA622229A83007AF53F /* Assets.xcassets */; };
@@ -29,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		884BC60D2236B58B006EBEA5 /* MonAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonAnnotation.swift; sourceTree = "<group>"; };
+		884BC60F2238F829006EBEA5 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		884BC6112238FEA7006EBEA5 /* MonAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonAnnotationView.swift; sourceTree = "<group>"; };
+		884BC613223A6458006EBEA5 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		88ABE85D2226999700F3FD39 /* APIWU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWU.swift; sourceTree = "<group>"; };
 		88ABE85F22269B1400F3FD39 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		88ABE8622227F48700F3FD39 /* XMLIndexer+XMLIndexerDeserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XMLIndexer+XMLIndexerDeserializable.swift"; sourceTree = "<group>"; };
@@ -39,6 +48,7 @@
 		88ABE892222D3ED800F3FD39 /* TracerAxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracerAxes.swift; sourceTree = "<group>"; };
 		88ABE894222E94B900F3FD39 /* PrecipitationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecipitationController.swift; sourceTree = "<group>"; };
 		88ABE896222E94CF00F3FD39 /* VentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentController.swift; sourceTree = "<group>"; };
+		88ABE89A2232AD9500F3FD39 /* CarteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteController.swift; sourceTree = "<group>"; };
 		88E38E9C22229A7E007AF53F /* StationsSki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StationsSki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E38E9F22229A7F007AF53F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E38EA422229A7F007AF53F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +122,7 @@
 				88ABE86A22294B5200F3FD39 /* APIForecast.swift */,
 				88ABE85F22269B1400F3FD39 /* APIHelper.swift */,
 				88ABE870222AE28600F3FD39 /* Forecasts.swift */,
+				884BC60F2238F829006EBEA5 /* UserDefaultsHelper.swift */,
 			);
 			path = Modeles;
 			sourceTree = "<group>";
@@ -124,6 +135,8 @@
 				88ABE892222D3ED800F3FD39 /* TracerAxes.swift */,
 				88ABE894222E94B900F3FD39 /* PrecipitationController.swift */,
 				88ABE896222E94CF00F3FD39 /* VentController.swift */,
+				884BC60D2236B58B006EBEA5 /* MonAnnotation.swift */,
+				884BC6112238FEA7006EBEA5 /* MonAnnotationView.swift */,
 			);
 			path = Vues;
 			sourceTree = "<group>";
@@ -134,6 +147,8 @@
 				88E38EB122229B55007AF53F /* DepartViewController.swift */,
 				88E38EB62223E6B5007AF53F /* ListeController.swift */,
 				88E38EB82223F44F007AF53F /* StationController.swift */,
+				88ABE89A2232AD9500F3FD39 /* CarteController.swift */,
+				884BC613223A6458006EBEA5 /* DetailController.swift */,
 			);
 			path = Controleurs;
 			sourceTree = "<group>";
@@ -210,20 +225,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				88ABE897222E94CF00F3FD39 /* VentController.swift in Sources */,
+				884BC614223A6458006EBEA5 /* DetailController.swift in Sources */,
 				88ABE86D222AB23B00F3FD39 /* TemperatureController.swift in Sources */,
 				88ABE871222AE28600F3FD39 /* Forecasts.swift in Sources */,
+				884BC60E2236B58B006EBEA5 /* MonAnnotation.swift in Sources */,
 				88ABE895222E94B900F3FD39 /* PrecipitationController.swift in Sources */,
 				88E38EB92223F44F007AF53F /* StationController.swift in Sources */,
 				88E38EBF22244636007AF53F /* CellListe.swift in Sources */,
 				88E38EBB22240274007AF53F /* Stations.swift in Sources */,
 				88ABE8652227F48700F3FD39 /* SWXMLHash.swift in Sources */,
+				884BC6102238F829006EBEA5 /* UserDefaultsHelper.swift in Sources */,
 				88E38EB222229B55007AF53F /* DepartViewController.swift in Sources */,
 				88ABE86022269B1400F3FD39 /* APIHelper.swift in Sources */,
 				88E38EB72223E6B5007AF53F /* ListeController.swift in Sources */,
 				88ABE85E2226999700F3FD39 /* APIWU.swift in Sources */,
 				88ABE86B22294B5200F3FD39 /* APIForecast.swift in Sources */,
+				88ABE89B2232AD9500F3FD39 /* CarteController.swift in Sources */,
 				88ABE8642227F48700F3FD39 /* XMLIndexer+XMLIndexerDeserializable.swift in Sources */,
 				88E38EA022229A7F007AF53F /* AppDelegate.swift in Sources */,
+				884BC6122238FEA7006EBEA5 /* MonAnnotationView.swift in Sources */,
 				88ABE893222D3ED800F3FD39 /* TracerAxes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Suchier.StationsSki;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -398,7 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Suchier.StationsSki;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

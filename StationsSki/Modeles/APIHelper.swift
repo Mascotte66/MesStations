@@ -13,6 +13,16 @@ typealias APIComplForecast = (_ donnees: APIForecast?, _ errorDetail: String?) -
 
 class APIHelper {
     
+    /*
+    App name
+    JMS's App
+    App ID
+    974ff615
+    Key
+    b71291b735c33f74b8bd97a4ffbbabb8
+    */
+    
+    
     let baseUrl = "https://api.weatherunlocked.com/"
     // Les Arcs   333011
     // Les Angles 54883735

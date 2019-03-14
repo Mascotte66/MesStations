@@ -32,13 +32,23 @@ class StationController: UIViewController {
     @IBOutlet weak var icone11: UIImageView!
     @IBOutlet weak var icone12: UIImageView!
     
+    @IBOutlet weak var titresView: UIView!
+    @IBOutlet weak var temperaturesView: UIView!
+    @IBOutlet weak var precipitationsView: UIView!
+    @IBOutlet weak var ventsView: UIView!
+    
+    
+    
+    
     @IBOutlet weak var veTemperatures: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        veTemperatures.layer.cornerRadius = 20
-        
+        titresView.layer.cornerRadius = 40
+        temperaturesView.layer.cornerRadius = 40
+        precipitationsView.layer.cornerRadius = 40
+        ventsView.layer.cornerRadius = 40
         
         let prev = Forecasts(forecasts: forecasts!)
         
@@ -78,4 +88,20 @@ class StationController: UIViewController {
         icone12.image = UIImage(named: nomIcone[45])
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "carte", let vc = segue.destination as? CarteController {
+            vc.nomStation = (sender as? String)!
+        }
+    }
+    
+    @IBAction func accesSiteWeb(_ sender: Any) {
+    }
+    
+    
+    @IBAction func carteAccesStation(_ sender: Any) {
+        
+         performSegue(withIdentifier: "carte", sender: nomS)
+    }
+    
 }

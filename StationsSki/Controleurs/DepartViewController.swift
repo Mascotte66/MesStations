@@ -34,6 +34,8 @@ class DepartViewController: UIViewController {
     var lesStations: [Station] = []
     var forecasts : APIForecast?
     
+    let lectWeb = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,50 +52,60 @@ class DepartViewController: UIViewController {
         
         //lecture du forecast de la station favorite
         
-        if let url = URL(string: "https://api.weatherunlocked.com/api/resortforecast/54883735?app_id=9a1bc4ca&app_key=157ca9c02a9f77ff1f68198ff3d53d55") {
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-               
-                if error != nil {
-                    print(error!.localizedDescription)
-                }
-                if data != nil {
-                    do {
-                        let responseJSON = try JSONDecoder().decode(APIForecast.self, from: data!)
-                        self.forecasts = responseJSON
-                    } catch {
-                        print(error.localizedDescription)
-                        
-                    }
-                } else {
-                    print("Pas de donnees disponibles")
-                }
-          
-                }.resume()
-            
-        } else {
-            print("url invalide")
-        }
-       
-        //lecture du snow report de la station favorite (si elle existe)
         
-        APIHelper().getSnowReport() { (donnees, errorString) in
-            if errorString != nil {
-                print(errorString!)
-            }
-            if donnees != nil {
-                self.lesStations.append(Station(favorite: true, pays: donnees!.resortcountry, nom: donnees!.resortname, id: donnees!.resortid, pctopen: donnees!.pctopen, lastsnow: donnees!.lastsnow, newsnow: donnees!.newsnow_cm, uppersnow: donnees!.uppersnow_cm, lowersnow: donnees!.lowersnow_cm, conditions: donnees!.conditions))
+        
+        if lectWeb == true {
+            
+            if let url = URL(string: "https://api.weatherunlocked.com/api/resortforecast/54883735?app_id=9a1bc4ca&app_key=157ca9c02a9f77ff1f68198ff3d53d55") {
+                URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    
+                    if error != nil {
+                        print(error!.localizedDescription)
+                    }
+                    if data != nil {
+                        do {
+                            let responseJSON = try JSONDecoder().decode(APIForecast.self, from: data!)
+                            self.forecasts = responseJSON
+                            
+                            //UserDefaultsHelper().setForecasts(forecasts: self.forecasts)
+                            
+                        } catch {
+                            print(error.localizedDescription)
+                            
+                        }
+                    } else {
+                        print("Pas de donnees disponibles")
+                    }
+                    
+                    }.resume()
                 
-                id = donnees!.resortid
-                nomS = donnees!.resortname
-                pctO = donnees!.pctopen
-                neigeH = donnees!.uppersnow_cm
-                neigeB = donnees!.lowersnow_cm
-                dateDerC = donnees!.lastsnow
-                hauteurDerC = donnees!.newsnow_cm
-                
-                //self.majParametres()
+            } else {
+                print("url invalide")
             }
+            
+            //lecture du snow report de la station favorite (si elle existe)
+            
+            APIHelper().getSnowReport() { (donnees, errorString) in
+                if errorString != nil {
+                    print(errorString!)
+                }
+                if donnees != nil {
+                    self.lesStations.append(Station(favorite: true, pays: donnees!.resortcountry, nom: donnees!.resortname, id: donnees!.resortid, pctopen: donnees!.pctopen, lastsnow: donnees!.lastsnow, newsnow: donnees!.newsnow_cm, uppersnow: donnees!.uppersnow_cm, lowersnow: donnees!.lowersnow_cm, conditions: donnees!.conditions))
+                    
+                    id = donnees!.resortid
+                    nomS = donnees!.resortname
+                    pctO = donnees!.pctopen
+                    neigeH = donnees!.uppersnow_cm
+                    neigeB = donnees!.lowersnow_cm
+                    dateDerC = donnees!.lastsnow
+                    hauteurDerC = donnees!.newsnow_cm
+                    
+                    //self.majParametres()
+                }
+            }
+            
         }
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -102,7 +114,13 @@ class DepartViewController: UIViewController {
         }
         
         if segue.identifier == "station", let vc = segue.destination as? StationController {
-            vc.forecasts = (sender as? APIForecast)!
+            
+            if lectWeb == true {
+                vc.forecasts = (sender as? APIForecast)!
+            } else {
+                vc.forecasts = UserDefaultsHelper().getForecats()                
+            }
+            
         }
     }
     

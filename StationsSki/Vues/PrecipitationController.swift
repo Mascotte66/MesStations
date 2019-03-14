@@ -58,8 +58,8 @@ class PrecipitationController: UIView {
             p.x = margeH + (pasInt * CGFloat(i + 1))
             let hautN = CGFloat(neige[i]) * coef
             if hautN > 0 {
-                UIColor.green.setFill()
-                UIColor.green.setStroke()
+                UIColor.blue.setFill()
+                UIColor.blue.setStroke()
                 p.y = yMax - margeV - hautN
                 let rNeige = CGRect(x: p.x, y: p.y, width: pasInt, height: hautN)
                 let cNeige = UIBezierPath(rect: rNeige)
