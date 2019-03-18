@@ -11,8 +11,9 @@ import MapKit
 
 class MonAnnotationView: MKAnnotationView {
     
-    //pour pouvoir acceder au DetailController, il faut passer par la procedure ci-dessous
-    //via un init special, on va recevoir l'objet CarteController
+    //Premiere methode pou acceder au DetailController
+    //On peut passer par la procedure ci-dessous
+    //via un init special, on va recevoir l'instance d'objet CarteController
     
     var controller: CarteController?
     
@@ -86,10 +87,26 @@ class MonAnnotationView: MKAnnotationView {
     
     @objc func detail() {
         guard let anno = annotation as? MonAnnotation else {return}
-        controller?.toDetail()
+        
+        //Premiere methode
+        //Grace a l'init, on peut acceder directement a une fonction du controller
+        
+        //controller?.toDetail()
+        
+        
+        //Deuxieme methode; passer par le NotificationCenter
+        //on cree une annotation. Ici on lui passe la variable title
+        
+        print("J'envoie une notification de titre: \(anno.title)")
+        NotificationCenter.default.post(name: Notification.Name("detail"), object: anno.title)
     }
     
     @objc func gps() {
+        guard let anno = annotation as? MonAnnotation else {return}
+        let placemark = MKPlacemark(coordinate: anno.coordinate)
+        let options = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        let map = MKMapItem(placemark: placemark)
+        map.openInMaps(launchOptions: options)
         
     }
 }
