@@ -17,12 +17,12 @@ class DetailController: UIViewController {
     @IBOutlet weak var image3: UIImageView!    
     @IBOutlet weak var image4: UIImageView!
     
-    var station: String?
+    var nomStation: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        maStation.text = nomS
+        maStation.text = nomStation
         monTexte.text = "Les Angles est une commune française située dans le département des Pyrénées-Orientales, en région Occitanie. Ses habitants sont appelés les Anglois, Anglesins ou Anglesencs.   \n     Superficie : 43,2 km²    \n    Population : 529 (2014) INSEE   \n     Heure locale : jeudi 12:28   \n     Météo : 4 °C, vent O à 16 km/h, 53 % d humidité"
         
         

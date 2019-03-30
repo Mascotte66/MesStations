@@ -63,13 +63,13 @@ class CarteController: UIViewController, MKMapViewDelegate, CLLocationManagerDel
     }
     
     func toDetail() {
-        performSegue(withIdentifier: "detail", sender: nomS)
+        performSegue(withIdentifier: "detail", sender: nomStation)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detail" {
             if let controller = segue.destination as? DetailController {
-                controller.station = sender as? String
+                controller.nomStation = sender as? String
             }
         }
     }
@@ -121,8 +121,7 @@ class CarteController: UIViewController, MKMapViewDelegate, CLLocationManagerDel
         if userPosition != nil {
             setupMap(location: userPosition!.coordinate)
         }
-    }
-    
+    }    
 }
 
 

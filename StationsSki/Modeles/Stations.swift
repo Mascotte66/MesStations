@@ -20,7 +20,8 @@ class Station {
     private var _uppersnow: Double
     private var _lowersnow: Double
     private var _conditions: String
-    
+    private var _latitude: Double
+    private var _longitude: Double
     
     var favorite: Bool {
         get{
@@ -103,7 +104,25 @@ class Station {
         }
     }
     
-    init(favorite: Bool, pays: String, nom: String, id: Int, pctopen: Int, lastsnow: String, newsnow: Double, uppersnow: Double, lowersnow: Double, conditions: String) {
+    var latitude: Double {
+        get{
+            return _latitude
+        }
+        set{
+            _latitude = latitude
+        }
+    }
+    
+    var longitude: Double {
+        get{
+            return _longitude
+        }
+        set{
+            _longitude = longitude
+        }
+    }
+    
+    init(favorite: Bool, pays: String, nom: String, id: Int, pctopen: Int, lastsnow: String, newsnow: Double, uppersnow: Double, lowersnow: Double, conditions: String, latitude: Double, longitude: Double) {
         _favorite = favorite
         _pays = pays
         _nom = nom
@@ -114,6 +133,8 @@ class Station {
         _uppersnow = uppersnow
         _lowersnow = lowersnow
         _conditions = conditions
+        _latitude = latitude
+        _longitude = longitude
     }
     
 }

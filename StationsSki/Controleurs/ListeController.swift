@@ -22,7 +22,11 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         titres.layer.cornerRadius = 10
         tableListeStations.delegate = self
-        tableListeStations.dataSource = self        
+        tableListeStations.dataSource = self
+        
+        //chargement table des atations
+        
+        lesStations = TableStations().lesStations        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

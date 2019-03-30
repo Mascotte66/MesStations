@@ -11,11 +11,14 @@ import UIKit
 class TracerAxes {
     
     
+    
     var maVue: UIView
+    var lesDates: [String]
     var p = CGPoint()
 
-    init(maVue: UIView) {
+    init(maVue: UIView, lesDates: [String]) {
         self.maVue = maVue
+        self.lesDates = lesDates
     }
     
     func dessinerAxes(type: String) {

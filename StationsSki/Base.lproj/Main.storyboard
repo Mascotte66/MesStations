@@ -1005,7 +1005,9 @@
                         <outlet property="precipitationsView" destination="9J0-Zg-WSu" id="DcE-nQ-VFm"/>
                         <outlet property="temperaturesView" destination="1YW-ko-MhN" id="A89-YB-YiO"/>
                         <outlet property="titresView" destination="Knc-n8-Tbk" id="MDX-XE-pqx"/>
+                        <outlet property="vePrecipitations" destination="flS-RT-bxx" id="xfH-wG-uiQ"/>
                         <outlet property="veTemperatures" destination="3Wk-sf-avC" id="0vn-E4-CTt"/>
+                        <outlet property="veVents" destination="lYb-Cg-PCg" id="r8Y-ij-hMp"/>
                         <outlet property="ventsView" destination="aWq-MI-ats" id="jiX-mN-NFz"/>
                         <segue destination="Jt1-iJ-xHS" kind="show" identifier="carte" id="oCM-Kr-ojA"/>
                     </connections>
