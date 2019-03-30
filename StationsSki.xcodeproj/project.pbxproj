@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		884BC60E2236B58B006EBEA5 /* MonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884BC60D2236B58B006EBEA5 /* MonAnnotation.swift */; };
-		884BC6102238F829006EBEA5 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884BC60F2238F829006EBEA5 /* UserDefaultsHelper.swift */; };
 		884BC6122238FEA7006EBEA5 /* MonAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884BC6112238FEA7006EBEA5 /* MonAnnotationView.swift */; };
 		884BC614223A6458006EBEA5 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884BC613223A6458006EBEA5 /* DetailController.swift */; };
 		88ABE85E2226999700F3FD39 /* APIWU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABE85D2226999700F3FD39 /* APIWU.swift */; };
@@ -32,12 +31,12 @@
 		88E38EBB22240274007AF53F /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E38EBA22240274007AF53F /* Stations.swift */; };
 		88E38EBF22244636007AF53F /* CellListe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E38EBE22244636007AF53F /* CellListe.swift */; };
 		C0BF431F224B947400FDDEF5 /* PrevsFormattees.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF431E224B947400FDDEF5 /* PrevsFormattees.swift */; };
+		C0BF4341224F89A400FDDEF5 /* SnowReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF4340224F89A400FDDEF5 /* SnowReport.swift */; };
 		C0D8311F2240E0DF00791BEA /* TableStations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8311E2240E0DF00791BEA /* TableStations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		884BC60D2236B58B006EBEA5 /* MonAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonAnnotation.swift; sourceTree = "<group>"; };
-		884BC60F2238F829006EBEA5 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		884BC6112238FEA7006EBEA5 /* MonAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonAnnotationView.swift; sourceTree = "<group>"; };
 		884BC613223A6458006EBEA5 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		88ABE85D2226999700F3FD39 /* APIWU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWU.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		88E38EBA22240274007AF53F /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
 		88E38EBE22244636007AF53F /* CellListe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellListe.swift; sourceTree = "<group>"; };
 		C0BF431E224B947400FDDEF5 /* PrevsFormattees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevsFormattees.swift; sourceTree = "<group>"; };
+		C0BF4340224F89A400FDDEF5 /* SnowReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowReport.swift; sourceTree = "<group>"; };
 		C0D8311E2240E0DF00791BEA /* TableStations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableStations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,11 +123,11 @@
 			children = (
 				88E38EBA22240274007AF53F /* Stations.swift */,
 				C0D8311E2240E0DF00791BEA /* TableStations.swift */,
+				C0BF4340224F89A400FDDEF5 /* SnowReport.swift */,
 				88ABE870222AE28600F3FD39 /* Forecasts.swift */,
 				88ABE85D2226999700F3FD39 /* APIWU.swift */,
 				88ABE86A22294B5200F3FD39 /* APIForecast.swift */,
 				88ABE85F22269B1400F3FD39 /* APIHelper.swift */,
-				884BC60F2238F829006EBEA5 /* UserDefaultsHelper.swift */,
 				C0BF431E224B947400FDDEF5 /* PrevsFormattees.swift */,
 			);
 			path = Modeles;
@@ -234,13 +234,13 @@
 				884BC614223A6458006EBEA5 /* DetailController.swift in Sources */,
 				88ABE86D222AB23B00F3FD39 /* TemperatureController.swift in Sources */,
 				88ABE871222AE28600F3FD39 /* Forecasts.swift in Sources */,
+				C0BF4341224F89A400FDDEF5 /* SnowReport.swift in Sources */,
 				884BC60E2236B58B006EBEA5 /* MonAnnotation.swift in Sources */,
 				88ABE895222E94B900F3FD39 /* PrecipitationController.swift in Sources */,
 				88E38EB92223F44F007AF53F /* StationController.swift in Sources */,
 				88E38EBF22244636007AF53F /* CellListe.swift in Sources */,
 				88E38EBB22240274007AF53F /* Stations.swift in Sources */,
 				88ABE8652227F48700F3FD39 /* SWXMLHash.swift in Sources */,
-				884BC6102238F829006EBEA5 /* UserDefaultsHelper.swift in Sources */,
 				88E38EB222229B55007AF53F /* DepartViewController.swift in Sources */,
 				88ABE86022269B1400F3FD39 /* APIHelper.swift in Sources */,
 				C0D8311F2240E0DF00791BEA /* TableStations.swift in Sources */,

@@ -14,8 +14,8 @@ class TableStations {
     
     init() {
         
-        lesStations.append(Station(favorite: true, pays: "France", nom: "Les Angles", id: 54883735, pctopen: 90, lastsnow: "10/02/2019", newsnow: 0, uppersnow: 80, lowersnow: 20, conditions: "Neige printemps", latitude: +42.57736590, longitude: +2.07401270))
-         lesStations.append(Station(favorite: false, pays: "France", nom: "Les Arcs", id: 54883735, pctopen: 95, lastsnow: "17/03/2019", newsnow: 20, uppersnow: 180, lowersnow: 120, conditions: "Neige printemps", latitude: +45.60312470, longitude: +6.77256470))        
+        lesStations.append(Station(favorite: false, pays: "France", nom: "Les Angles", id: 54883735, pctopen: 90, lastsnow: "10/02/2019", newsnow: 0, uppersnow: 80, lowersnow: 20, conditions: "Neige printemps", latitude: +42.57736590, longitude: +2.07401270))
+         lesStations.append(Station(favorite: true, pays: "France", nom: "Les Arcs", id: 54883735, pctopen: 0, lastsnow: "00/00/0000", newsnow: 0, uppersnow: 0, lowersnow: 0, conditions: "     ", latitude: +45.60312470, longitude: +6.77256470))
         lesStations.append(Station(favorite: false, pays: "France", nom: "La Mongie", id: 333025, pctopen: 80, lastsnow: "28/02/2019", newsnow: 25, uppersnow: 120, lowersnow: 80, conditions: "Neige fraiche", latitude: +42.910, longitude: 0.1796))
         lesStations.append(Station(favorite: false, pays: "France", nom: "Fon Romeu", id: 54883703, pctopen: 85, lastsnow: "10/02/2019", newsnow: 0, uppersnow: 70, lowersnow: 20, conditions: "Neige printemps", latitude: 42.5056, longitude: 2.0417))
         lesStations.append(Station(favorite: false, pays: "France", nom: "Avoriaz", id: 333002, pctopen: 100, lastsnow: "25/02/2019", newsnow: 40, uppersnow: 220, lowersnow: 150, conditions: "Neige fraiche", latitude: 45.9348, longitude: 5.4738))

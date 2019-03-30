@@ -10,6 +10,8 @@ import Foundation
 
 class Forecasts {
     
+    //recherche sur web des forecasts de la station, et conversion au format PrevsFormattees
+    
     private var task: URLSessionDataTask?
     
     //prour creer singleton de Forecasts
@@ -20,13 +22,17 @@ class Forecasts {
     var forecasts: APIForecast?    
    
     func lireForecasts(id: Int, callback: @escaping (Bool, PrevsFormattees?) -> Void) {
-       
-        // if let url = URL(string: "https://api.weatherunlocked.com/api/resortforecast/54883735?
-        //app_id=9a1bc4ca&app_key=157ca9c02a9f77ff1f68198ff3d53d55") {
+        
+        let urlLesAngles = URL(string: "https://api.weatherunlocked.com/api/resortforecast/54883735?app_id=9a1bc4ca&app_key=157ca9c02a9f77ff1f68198ff3d53d55")
+        let urlLesArcs = URL(string: "https://api.weatherunlocked.com/api/resortforecast/333011?app_id=974ff615&app_key=b71291b735c33f74b8bd97a4ffbbabb8")
+        
+        var urlForecasts: URL?
+        
+        if id == 33301 {urlForecasts = urlLesArcs}
+        if id == 54883735 {urlForecasts = urlLesAngles}
         
         
-        if let url = URL(string: "https://api.weatherunlocked.com/api/resortforecast/" + "\(id)" + "?app_id=9a1bc4ca&app_key=157ca9c02a9f77ff1f68198ff3d53d55") {
-        
+        if let url = urlForecasts {
         
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 

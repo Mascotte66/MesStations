@@ -8,8 +8,8 @@
 
 import Foundation
 
-typealias APIComplSnow = (_ donnees: APIWU?, _ errorDetail: String?) -> Void
-typealias APIComplForecast = (_ donnees: APIForecast?, _ errorDetail: String?) -> Void
+//typealias APIComplSnow = (_ donnees: APIWU?, _ errorDetail: String?) -> Void
+//typealias APIComplForecast = (_ donnees: APIForecast?, _ errorDetail: String?) -> Void
 
 class APIHelper {
     
@@ -53,7 +53,7 @@ class APIHelper {
             completion?(nil, "url invalide")
         }
     }
-    
+    /*
     func getForecast(completion: APIComplForecast?)  {
         
         if let url = URL(string: baseUrl + urlForecast) {
@@ -78,4 +78,5 @@ class APIHelper {
             completion?(nil, "url invalide")
         }
     }
+ */
 }

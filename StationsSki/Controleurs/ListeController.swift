@@ -7,11 +7,12 @@
 //
 
 import UIKit
+
 import Foundation
 
 class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
-    var lesStations: [Station] = []
+    //var lesStations: [Station]?
     
     
     @IBOutlet weak var titres: UIView!
@@ -22,11 +23,8 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         titres.layer.cornerRadius = 10
         tableListeStations.delegate = self
-        tableListeStations.dataSource = self
-        
-        //chargement table des atations
-        
-        lesStations = TableStations().lesStations        
+        tableListeStations.dataSource = self   
+       
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

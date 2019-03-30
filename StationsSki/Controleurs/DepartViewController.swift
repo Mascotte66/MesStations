@@ -7,31 +7,12 @@
 //
 
 import UIKit
-/*
-//variables globales!!!!!!
-var id: Int = 0
-var nomS = ""
-var pctO: Int = 0
-var neigeH: Double = 0
-var neigeB: Double = 0
-var dateDerC: String = ""
-var hauteurDerC: Double = 0
 
-var indPrem: Int = 0
-var indDer: Int = 0
+var lesStations: [Station] = []
 
-var lesDates: [String] = []
-var nomIcone: [String] = []
-var tempBas: [Double] = []
-var tempHaut: [Double] = []
-var neige: [Double] = []
-var pluie: [Double] = []
-var vent: [Double] = []
-var rafales: [Double] = []
-*/
-class DepartViewController: UIViewController {    
+class DepartViewController: UIViewController {
     
-    var lesStations: [Station] = []
+   
     var forecasts : APIForecast?
     
     //let lectWeb = true
@@ -42,11 +23,25 @@ class DepartViewController: UIViewController {
         //chargement table des atations
         lesStations = TableStations().lesStations
         
+        //recherche du snowreport des Arcs
+        
+        SnowReport.shared.getSnowReport { (report, erreur) in
+            if erreur == nil {
+                
+                lesStations[1].pctopen = report!.pctopen
+                lesStations[1].lastsnow = report!.lastsnow
+                lesStations[1].newsnow = report!.newsnow_cm
+                lesStations[1].uppersnow = report!.uppersnow_cm
+                lesStations[1].lowersnow = report!.lowersnow_cm
+                lesStations[1].conditions = report!.conditions
+                
+            }
+        }        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "liste", let vc = segue.destination as? ListeController {
-            vc.lesStations = (sender as? [Station])!
+            //vc.lesStations = (sender as? [Station])!
         }
         
         if segue.identifier == "station", let vc = segue.destination as? StationController {
